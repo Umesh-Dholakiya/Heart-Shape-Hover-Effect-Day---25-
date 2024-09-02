@@ -1,0 +1,42 @@
+body {
+    background-color: #2d2d2d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.heart {
+    width: 100px;
+    height: 100px;
+    background-color: #ff0077;
+    position: relative;
+    transform: rotate(-45deg);
+    margin: 50px;
+    transition: transform 0.3s ease;
+}
+
+.heart::before,
+.heart::after {
+    content: "";
+    width: 100px;
+    height: 100px;
+    background-color: #ff0077;
+    border-radius: 50%;
+    position: absolute;
+}
+
+.heart::before {
+    top: -50px;
+    left: 0;
+}
+
+.heart::after {
+    top: 0;
+    left: 50px;
+}
+
+.heart:hover {
+    transform: rotate(-45deg) scale(1.2);
+}
